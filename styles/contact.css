@@ -1,0 +1,240 @@
+.iz-map-container {
+    width: 100%;
+    height: 450px;
+    margin: 0;
+}
+
+.iz-map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.iz-contact {
+    width: 100%;
+    background-color: white;
+    margin-top: 0;
+    padding-top: 50px;
+}
+
+input {
+    display: block;
+}
+
+.iz-contact-content {
+    width: 1320px;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0 0.125rem 1rem rgb(0 0 0 / 8%) !important;
+    height: 540px;
+    border-radius: 40px;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.iz-contact-form-title {
+    font-size: 22px;
+    text-transform: capitalize;
+    font-weight: 500;
+    letter-spacing: .3px;
+    color: var(--laci);
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.iz-contact-form-desc {
+    text-align: center;
+    line-height: 1.5;
+    font-weight: 300;
+    font-size: 16px;
+    margin: 0 auto 20px auto;
+    letter-spacing: .1px;
+    color: lightgray;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.iz-contact-form {
+    width: 49%;
+    padding: 0 40px;
+    border-right: 1px solid var(--laci);
+}
+
+.iz-contact-form form {
+    margin: 0 auto;
+}
+
+
+.iz-contact-form form>.iz-form-two {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+
+    &>div {
+        width: 48%;
+    }
+}
+
+
+label {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: .3px;
+    color: #141414;
+    margin-bottom: 4px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    padding-left: 7px;
+
+}
+
+input[type="text"] {
+    border-radius: 20px;
+    border: 2px solid #f0f0f0;
+    padding: 8px .75rem;
+    width: 100%;
+    height: 40px;
+}
+
+.message {
+    height: 80px;
+    width: 100%;
+    border-radius: 20px;
+    border: 2px solid #f0f0f0;
+    padding: 8px .75rem;
+}
+
+.iz-input-container {
+    width: 100%;
+}
+
+.iz-submit-button {
+    width: 100%;
+    height: 40px;
+    background-color: var(--laci);
+    color: white;
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all .3s ease-in-out;
+}
+
+.iz-contact-info {
+    width: 49%;
+    padding: 0 40px;
+}
+
+.iz-contact-info-card {
+    border-radius: 45px;
+    padding: 20px 34px;
+    margin-bottom: 25px;
+    transition: all .3s;
+    box-shadow: 0 0.125rem 1rem rgb(0 0 0 / 8%) !important;
+    cursor: pointer;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    height: 85px;
+
+    i {
+        font-size: 24px;
+
+    }
+
+    h6 {
+        text-transform: none !important;
+        letter-spacing: .1px !important;
+        margin-bottom: 1px !important;
+        font-size: 14px !important;
+        color: #0d1a33 !important;
+        font-weight: 600 !important;
+        margin-top: 0px;
+        min-width: 90px;
+        width: 90px;
+        line-height: 1.3;
+        margin-right: 10px;
+        font-family: "Poppins", sans-serif;
+    }
+
+    p {
+        font-weight: 500;
+        display: inline-block;
+        text-decoration: none !important;
+        font-size: 15px;
+        letter-spacing: .4px;
+        padding: 0;
+        margin-bottom: 0;
+        color: #444 !important;
+        border: none;
+        font-family: "Poppins", sans-serif;
+    }
+}
+
+.iz-contact-info-card:hover {
+
+    box-shadow: 3px 3px 14px rgb(0, 0, 0, 0.15) !important;
+    transition: all .3s;
+}
+
+@media screen and (max-width: 1320px) {
+    .iz-contact-content {
+        width: 98%;
+        padding: 5px;
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    .iz-contact-form,
+    .iz-contact-info {
+        width: 100%;
+        border-right: none;
+        padding: 0;
+    }
+
+    .iz-contact-form {
+        margin-bottom: 20px;
+    }
+
+    .iz-contact-info {
+        padding: 0 20px;
+    }
+
+    .iz-contact-info-card {
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        text-align: center;
+
+        h6 {
+            margin-right: 0;
+            width: unset;
+        }
+    }
+
+    .iz-form-two {
+        flex-direction: column;
+        margin-bottom: 0 !important;
+
+        .iz-input-container {
+            width: 100% !important;
+            margin-bottom: 15px;
+        }
+
+
+    }
+
+    label {
+        text-align: center;
+        width: 100%;
+    }
+}
