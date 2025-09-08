@@ -8,7 +8,7 @@
 @import url(index.css);
 @import url(./components/header.css);
 @import url(./components/slider.css);
-@import url(./components/footer.css);
+@import url(./components/footer-modern.css);
 @import url(./components/cardSlider.css);
 @import url(./components/breadcrumb.css);
 @import url(./about.css);
@@ -33,7 +33,6 @@ textarea {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Bellefair", serif;
 }
 
 h1,

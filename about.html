@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
 
 <head>
   <meta charset="UTF-8">
@@ -10,8 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="../styles/normalization.css">
-  <script src="scripts/components.js"></script>
+  <link rel="stylesheet" href="styles/normalization.css">
   <script src="./scripts/header.js"></script>
   <link rel="icon" type="image/x-icon" href="./assets/fav.png">
 
@@ -20,9 +19,352 @@
 
 <body class="header-mock">
 
+  <header class="iz-header">
+    <a href="./index.html">
+      <div class="iz-header-logo">
+      </div>
+    </a>
 
+    <nav class="iz-header-nav">
+      <ul class="iz-header-nav-list">
+        <li class="nav-links"><a class="nav-direct" href="./index.html">Anasayfa</a></li>
+        <li class="nav-links"><a class="nav-direct active" href="./about.html">Hakkımızda</a></li>
+        <li class="nav-links"><a class="nav-direct" href="./services.html">Derslerimiz</a></li>
+        <li class="nav-links"><a class="nav-direct" href="./contact.html">İletişim</a></li>
+      </ul>
+    </nav>
+    <div class="iz-mobile-menu">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </header>
 
+  <main class="iz-about-main">
 
+    <!-- Hero Section -->
+    <section class="iz-about-hero">
+      <div class="iz-hero-content">
+        <h1 class="iz-hero-title">Hakkımızda</h1>
+        <p class="iz-hero-subtitle">İZ Cimnastik ailesi olarak çocuklarınızın gelişimine katkı sağlıyoruz</p>
+      </div>
+    </section>
+
+    <!-- Çocuklar için spor ve eğlence -->
+    <section class="iz-about-section">
+      <div class="iz-container">
+        <div class="iz-section-content">
+          <div class="iz-text-content">
+            <h2 class="iz-section-title">
+              <i class="fas fa-child-reaching"></i>
+              Çocuklar için Spor ve Eğlence
+            </h2>
+            <p class="iz-section-description">
+              Cimnastik, çocuklar için sadece bir spor dalı değil, aynı zamanda eğlenceli bir macera ve öğrenme
+              deneyimidir.
+              İZ Cimnastik'te, her çocuğun bireysel ihtiyaçlarını göz önünde bulundurarak, sporu sevdirmeyi ve yaşam
+              boyu
+              sürecek sağlıklı alışkanlıklar kazandırmayı hedefliyoruz.
+            </p>
+            <div class="iz-features-list">
+              <div class="iz-feature-item">
+                <i class="fas fa-star"></i>
+                <span>Eğlenceli ve interaktif eğitim yöntemleri</span>
+              </div>
+              <div class="iz-feature-item">
+                <i class="fas fa-star"></i>
+                <span>Yaş gruplarına uygun oyunlaştırılmış aktiviteler</span>
+              </div>
+              <div class="iz-feature-item">
+                <i class="fas fa-star"></i>
+                <span>Sosyal beceri geliştirici grup çalışmaları</span>
+              </div>
+            </div>
+          </div>
+          <div class="iz-image-content">
+            <img src="./assets/images/about/about1.jpg" alt="Çocuklar için cimnastik eğitimi" class="iz-section-image">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cimnastiğe erken yaşta başlamanın önemi -->
+    <section class="iz-about-section iz-reverse">
+      <div class="iz-container">
+        <div class="iz-section-content">
+          <div class="iz-image-content">
+            <img src="./assets/images/about/about2.jpg" alt="Erken yaş cimnastik eğitimi" class="iz-section-image">
+          </div>
+          <div class="iz-text-content">
+            <h2 class="iz-section-title">
+              <i class="fas fa-seedling"></i>
+              Cimnastiğe Erken Yaşta Başlamanın Önemi
+            </h2>
+            <p class="iz-section-description">
+              4-12 yaş arası dönem, çocukların motor becerilerinin hızla geliştiği kritik bir süreçtir. Bu dönemde
+              cimnastik eğitimine başlamak, çocuğun fiziksel, zihinsel ve sosyal gelişiminde kalıcı pozitif etkiler
+              yaratır.
+            </p>
+            <div class="iz-benefits-grid">
+              <div class="iz-benefit-card">
+                <i class="fas fa-brain"></i>
+                <h4>Zihinsel Gelişim</h4>
+                <p>Konsantrasyon ve odaklanma becerilerini geliştirir</p>
+              </div>
+              <div class="iz-benefit-card">
+                <i class="fas fa-heart"></i>
+                <h4>Fiziksel Sağlık</h4>
+                <p>Kardiyovasküler sistem ve kas gelişimini destekler</p>
+              </div>
+              <div class="iz-benefit-card">
+                <i class="fas fa-users"></i>
+                <h4>Sosyal Beceriler</h4>
+                <p>Takım çalışması ve iletişim becerilerini güçlendirir</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Neden bizi tercih etmelisiniz -->
+    <section class="iz-about-section">
+      <div class="iz-container">
+        <div class="iz-section-content">
+          <div class="iz-text-content">
+            <h2 class="iz-section-title">
+              <i class="fas fa-medal"></i>
+              Neden Bizi Tercih Etmelisiniz?
+            </h2>
+            <p class="iz-section-description">
+              İZ Cimnastik olarak, çocuklarınızın gelişimi için en iyi eğitimi sunmaya kararlıyız.
+              Deneyimli kadromuz, modern tesislerimiz ve bireysel yaklaşımımızla fark yaratıyoruz.
+            </p>
+            <div class="iz-advantages-list">
+              <div class="iz-advantage-item">
+                <div class="iz-advantage-icon">
+                  <i class="fas fa-certificate"></i>
+                </div>
+                <div class="iz-advantage-content">
+                  <h4>Sertifikalı Eğitmenler</h4>
+                  <p>Ulusal ve uluslararası sertifikalara sahip deneyimli eğitmen kadromuz</p>
+                </div>
+              </div>
+              <div class="iz-advantage-item">
+                <div class="iz-advantage-icon">
+                  <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="iz-advantage-content">
+                  <h4>Güvenlik Önceliği</h4>
+                  <p>En yüksek güvenlik standartları ve sürekli denetim sistemi</p>
+                </div>
+              </div>
+              <div class="iz-advantage-item">
+                <div class="iz-advantage-icon">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="iz-advantage-content">
+                  <h4>Bireysel Gelişim</h4>
+                  <p>Her çocuğun kendi hızında ilerlemesini destekleyen kişiye özel program</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="iz-image-content">
+            <img src="./assets/images/about/about3.jpg" alt="Profesyonel cimnastik eğitimi" class="iz-section-image">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kas gelişimi ve fiziksel beceriler -->
+    <section class="iz-about-section iz-reverse">
+      <div class="iz-container">
+        <div class="iz-section-content">
+          <div class="iz-image-content">
+            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&h=400&fit=crop&crop=center"
+              alt="Cimnastik kas gelişimi" class="iz-section-image">
+          </div>
+          <div class="iz-text-content">
+            <h2 class="iz-section-title">
+              <i class="fas fa-dumbbell"></i>
+              Kuvvet, Denge, Dayanıklılık ve Esneklik Eğitimleri
+            </h2>
+            <p class="iz-section-description">
+              Cimnastik, çocukların fiziksel gelişimi için gereken tüm temel becerileri bir arada geliştiren
+              en kapsamlı spor dallarından biridir. Programlarımız, kas gelişimi ve motor becerilerin
+              sistematik bir şekilde geliştirilmesini sağlar.
+            </p>
+            <div class="iz-skills-grid">
+              <div class="iz-skill-card">
+                <div class="iz-skill-icon">
+                  <i class="fas fa-fist-raised"></i>
+                </div>
+                <h4>Kuvvet Geliştirme</h4>
+                <p>Vücut ağırlığı ile yapılan egzersizlerle tüm kas gruplarının güçlendirilmesi</p>
+              </div>
+              <div class="iz-skill-card">
+                <div class="iz-skill-icon">
+                  <i class="fas fa-balance-scale"></i>
+                </div>
+                <h4>Denge ve Koordinasyon</h4>
+                <p>Statik ve dinamik denge becerilerinin geliştirilmesi</p>
+              </div>
+              <div class="iz-skill-card">
+                <div class="iz-skill-icon">
+                  <i class="fas fa-running"></i>
+                </div>
+                <h4>Dayanıklılık</h4>
+                <p>Kardiyovasküler sistem ve kas dayanıklılığının artırılması</p>
+              </div>
+              <div class="iz-skill-card">
+                <div class="iz-skill-icon">
+                  <i class="fas fa-leaf"></i>
+                </div>
+                <h4>Esneklik</h4>
+                <p>Eklem hareketliliği ve kas esnekliğinin geliştirilmesi</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="iz-about-cta">
+      <div class="iz-container">
+        <div class="iz-cta-content">
+          <h2 class="iz-cta-title">Çocuğunuzun Potansiyelini Keşfedin!</h2>
+          <p class="iz-cta-text">
+            İZ Cimnastik ailesine katılın ve çocuğunuzun fiziksel, zihinsel ve sosyal gelişimine katkı sağlayın.
+            Ücretsiz deneme dersi için hemen bizimle iletişime geçin.
+          </p>
+          <div class="iz-cta-buttons">
+            <a href="./contact.html" class="iz-btn-primary">
+              <i class="fas fa-phone"></i>
+              İletişime Geçin
+            </a>
+            <a href="./services.html" class="iz-btn-secondary">
+              <i class="fas fa-info-circle"></i>
+              Derslerimizi İnceleyin
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modern Footer -->
+  <footer class="modern-footer">
+    <div class="footer-wave"></div>
+    <div class="footer-content">
+      <div class="footer-main">
+
+        <!-- Company Info -->
+        <div class="footer-company">
+          <div class="footer-logo-modern"></div>
+          <p class="footer-company-desc">
+            İZ Cimnastik olarak profesyonel eğitmenlerimiz ile çocuklarınızın artistik cimnastik yolculuğunda
+            yanınızdayız.
+            Güvenli ve modern tesislerimizde kaliteli eğitim sunarak, her yaştan sporcuyu destekliyoruz.
+          </p>
+          <div class="footer-social-modern">
+            <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-btn"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-btn"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="social-btn"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section-modern">
+          <h3 class="footer-section-title">Hızlı Linkler</h3>
+          <ul class="footer-menu-modern">
+            <li><a href="./index.html">Anasayfa</a></li>
+            <li><a href="./about.html">Hakkımızda</a></li>
+            <li><a href="./services.html">Derslerimiz</a></li>
+            <li><a href="./contact.html">İletişim</a></li>
+            <li><a href="#">Galeri</a></li>
+            <li><a href="#">Etkinlikler</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="footer-section-modern">
+          <h3 class="footer-section-title">Hizmetlerimiz</h3>
+          <ul class="footer-menu-modern">
+            <li><a href="#">4-12 Yaş Artistik Cimnastik</a></li>
+            <li><a href="#">Özel Ders</a></li>
+            <li><a href="#">Temel Hareket Eğitimi</a></li>
+            <li><a href="#">Grup Dersleri</a></li>
+            <li><a href="#">Yarışma Hazırlığı</a></li>
+            <li><a href="#">Yaz Kampları</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-section-modern footer-contact-modern">
+          <h3 class="footer-section-title">İletişim</h3>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-details">
+              <h6>Adres</h6>
+              <p>Altay, Söğüt Cd. No:12/C<br>06874 Etimesgut/Ankara</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="contact-details">
+              <h6>Telefon</h6>
+              <a href="tel:+905309491706">+90 (530) 949 17 06</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-details">
+              <h6>E-posta</h6>
+              <a href="mailto:izcimnastik@gmail.com">izcimnastik@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="contact-details">
+              <h6>Çalışma Saatleri</h6>
+              <p>Pazartesi - Cuma: 09:00 - 21:00<br>Cumartesi - Pazar: 09:00 - 18:00</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom-modern">
+        <div class="footer-bottom-content">
+          <p class="footer-copyright">&copy; 2024 İZ Cimnastik. Tüm hakları saklıdır.</p>
+          <div class="footer-legal-links">
+            <a href="#">Gizlilik Politikası</a>
+            <a href="#">Kullanım Şartları</a>
+            <a href="#">KVKK</a>
+            <a href="#">Çerez Politikası</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./scripts/components.js"></script>
 </body>
 
 </html>

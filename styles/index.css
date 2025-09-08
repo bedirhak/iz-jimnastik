@@ -515,6 +515,10 @@
   position: relative;
 }
 
+.home-title {
+  justify-content: center;
+}
+
 .iz-section-title::after {
   content: "";
   position: absolute;

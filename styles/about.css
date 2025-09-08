@@ -1,80 +1,502 @@
-.iz-about-container {
-
+/* About Page Modern Styles */
+.iz-about-main {
     font-family: "Plus Jakarta Sans", sans-serif;
-    background-color: white;
-
+    background-color: #ffffff;
 }
 
-.iz-about-content {
+/* Hero Section */
+.iz-about-hero {
+    background: linear-gradient(135deg, var(--laci) 0%, var(--main-gold) 100%);
+    padding: 150px 0 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.iz-about-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../assets/images/slider/slider2.jpg') center/cover;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.iz-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.iz-hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.iz-hero-subtitle {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Common Container */
+.iz-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Section Styles */
+.iz-about-section {
+    padding: 80px 0;
+    position: relative;
+}
+
+.iz-about-section:nth-child(even) {
+    background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+}
+
+.iz-section-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.iz-reverse .iz-section-content {
+    grid-template-columns: 1fr 1fr;
+}
+
+.iz-reverse .iz-text-content {
+    order: 2;
+}
+
+.iz-reverse .iz-image-content {
+    order: 1;
+}
+
+/* Text Content */
+.iz-section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--laci);
+    margin-bottom: 25px;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    width: 1240px;
-    margin: 0 auto 50px;
-    padding-top: 100px;
-
+    align-items: center;
+    gap: 15px;
 }
 
-.iz-about-content-title {
-    font-size: 16px;
-    font-weight: normal;
-    line-height: 22px;
-    width: 25%;
+.iz-section-title i {
+    color: var(--main-gold);
+    font-size: 2rem;
+}
+
+.iz-section-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Image Content */
+.iz-section-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.iz-section-image:hover {
+    transform: scale(1.02);
+}
+
+/* Features List */
+.iz-features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.iz-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    background: rgba(185, 159, 0, 0.1);
+    border-radius: 10px;
+    border-left: 4px solid var(--main-gold);
+}
+
+.iz-feature-item i {
+    color: var(--main-gold);
+    font-size: 1.1rem;
+}
+
+.iz-feature-item span {
+    font-weight: 500;
     color: var(--laci);
 }
 
-.iz-about-content-part {
-    width: 75%;
-
+/* Benefits Grid */
+.iz-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
 }
 
-.iz-about-content-text {
-    width: 100%;
-    font-size: 16px;
-    line-height: 20px;
+.iz-benefit-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    border-top: 4px solid var(--main-gold);
+}
+
+.iz-benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.iz-benefit-card i {
+    font-size: 2.5rem;
+    color: var(--main-gold);
+    margin-bottom: 15px;
+}
+
+.iz-benefit-card h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--laci);
     margin-bottom: 10px;
 }
 
-.iz-about-content-mission-vision {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+.iz-benefit-card p {
+    color: #666;
+    line-height: 1.5;
 }
 
-.iz-about-content-mission-vision>div {
+/* Advantages List */
+.iz-advantages-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.iz-advantage-item {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
-    gap: 1rem;
-    font-size: 16px;
-    width: 50%;
+    gap: 20px;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
 
-    .iz-about-content-icon {
-        min-width: 56px;
-        height: 56px;
-        border-radius: 100px;
-        display: flex;
+.iz-advantage-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.iz-advantage-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--main-gold), #ffd700);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.iz-advantage-icon i {
+    font-size: 1.5rem;
+    color: var(--laci);
+}
+
+.iz-advantage-content h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--laci);
+    margin-bottom: 8px;
+}
+
+.iz-advantage-content p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Skills Grid */
+.iz-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.iz-skill-card {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.iz-skill-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--main-gold), #ffd700);
+}
+
+.iz-skill-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.iz-skill-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--laci), var(--main-gold));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.iz-skill-icon i {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.iz-skill-card h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--laci);
+    margin-bottom: 12px;
+}
+
+.iz-skill-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Call to Action */
+.iz-about-cta {
+    background: linear-gradient(135deg, var(--laci) 0%, var(--main-gold) 100%);
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+}
+
+.iz-cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.iz-cta-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.iz-cta-text {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.iz-cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.iz-btn-primary,
+.iz-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.iz-btn-primary {
+    background: white;
+    color: var(--laci);
+}
+
+.iz-btn-primary:hover {
+    background: var(--main-gold);
+    color: var(--laci);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.iz-btn-secondary {
+    background: transparent;
+    color: white;
+    border-color: white;
+}
+
+.iz-btn-secondary:hover {
+    background: white;
+    color: var(--laci);
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .iz-section-content {
+        grid-template-columns: 1fr !important;
+        gap: 40px;
+    }
+
+    .iz-reverse .iz-text-content,
+    .iz-reverse .iz-image-content {
+        order: unset;
+    }
+
+    .iz-section-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .iz-section-title i {
+
+        margin: auto;
+    }
+
+    .iz-section-description {
+        text-align: center;
+    }
+
+    .iz-about-section {
+        padding: 60px 0;
+    }
+
+    .iz-hero-title {
+        font-size: 2.5rem;
+    }
+
+    .iz-hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .iz-section-title {
+        font-size: 2rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .iz-section-description {
+        font-size: 1rem;
+    }
+
+    .iz-benefits-grid,
+    .iz-skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .iz-cta-title {
+        font-size: 2.2rem;
+    }
+
+    .iz-cta-buttons {
+        flex-direction: column;
         align-items: center;
+    }
+
+    .iz-btn-primary,
+    .iz-btn-secondary {
+        width: 100%;
+        max-width: 300px;
         justify-content: center;
-        background-color: var(--laci);
-        font-size: 24px;
-        color: white;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .iz-advantage-icon {
+        margin: auto;
     }
 
-    h3 {
-        font-size: 24px;
-        line-height: 32px;
-        font-weight: 500;
-        margin-bottom: 16px;
+    .iz-container {
+        padding: 0 15px;
     }
 
-    .iz-about-content-text {
-        p {
-            font-size: 16px;
-            line-height: 24px;
-            font-weight: 300;
-            color: var(--light-gray);
-        }
+    .iz-hero-title {
+        font-size: 2rem;
+    }
+
+    .iz-section-title {
+        font-size: 1.8rem;
+    }
+
+    .iz-advantage-item {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.iz-about-content-icon {
+    min-width: 56px;
+    height: 56px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--laci);
+    font-size: 24px;
+    color: white;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.iz-about-content-text {
+    p {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 300;
+        color: var(--light-gray);
     }
 }
 
