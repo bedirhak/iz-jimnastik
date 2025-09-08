@@ -8,11 +8,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     <nav class="iz-header-nav">
       <ul class="iz-header-nav-list">
-        <li class="nav-links"><a class="nav-direct" href="./index.html">Anasayfa</a></li>
-        <li class="nav-links"><a class="nav-direct" href="./about.html">Hakkımızda</a></li>
-        <li class="nav-links"><a class="nav-direct" href="./services.html">Hizmetlerimiz</a></li>
+        <li class="nav-links"><a class="nav-direct" href="./index.html"><i class="fas fa-home"></i> Anasayfa</a></li>
+        <li class="nav-links"><a class="nav-direct" href="./about.html"><i class="fas fa-info-circle"></i> Hakkımızda</a></li>
+        <li class="nav-links"><a class="nav-direct" href="./services.html"><i class="fas fa-dumbbell"></i> Hizmetlerimiz</a></li>
         <!-- <li class="nav-links"><a class="nav-direct" href="./team.html">Eğitmenlerimiz</a></li> -->
-        <li class="nav-links"><a class="nav-direct" href="./contact.html">İletişim</a></li>
+        <li class="nav-links"><a class="nav-direct" href="./contact.html"><i class="fas fa-envelope"></i> İletişim</a></li>
       </ul>
     </nav>
     <div class="iz-mobile-menu">

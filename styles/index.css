@@ -516,7 +516,7 @@
 }
 
 .home-title {
-  align-content: center;
+  align-items: center !important;
   text-align: center;
 }
 
@@ -630,5 +630,83 @@
 
   .iz-section-title {
     font-size: 1.8rem;
+  }
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #25d366 0%, #20c55a 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+  z-index: 1000;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: whatsapp-pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 15px 35px rgba(37, 211, 102, 0.5);
+  background: linear-gradient(135deg, #20c55a 0%, #25d366 100%);
+}
+
+.whatsapp-float i {
+  color: white;
+  font-size: 28px;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover i {
+  color: white;
+  transform: scale(1.1);
+}
+
+/* WhatsApp Button Animation */
+@keyframes whatsapp-pulse {
+  0% {
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+  }
+
+  50% {
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3), 0 0 0 10px rgba(37, 211, 102, 0.1);
+  }
+
+  100% {
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+  }
+}
+
+/* Responsive WhatsApp Button */
+@media screen and (max-width: 768px) {
+  .whatsapp-float {
+    bottom: 20px;
+    left: 20px;
+    width: 55px;
+    height: 55px;
+  }
+
+  .whatsapp-float i {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .whatsapp-float {
+    bottom: 15px;
+    left: 15px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .whatsapp-float i {
+    font-size: 22px;
   }
 }

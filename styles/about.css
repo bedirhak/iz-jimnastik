@@ -758,7 +758,7 @@ h3 {
 .go-to-top {
     position: fixed;
     bottom: 30px;
-    right: 100px;
+    right: 30px;
     width: 41px;
     /* 20px + 1px boşluk + 20px */
     height: 20px;

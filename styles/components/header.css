@@ -48,6 +48,20 @@ body.header-mock .iz-header {
         font-size: 20px;
         text-decoration: none;
         color: inherit;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .nav-direct i {
+        font-size: 16px;
+        opacity: 0.8;
+        transition: all 0.3s ease;
+      }
+
+      &:hover .nav-direct i {
+        opacity: 1;
+        transform: scale(1.1);
       }
 
       &::after {
@@ -96,6 +110,10 @@ body.header-mock .iz-header {
 
       .nav-links .nav-direct {
         font-size: 18px;
+      }
+
+      .nav-links .nav-direct i {
+        font-size: 14px;
       }
     }
   }
@@ -148,10 +166,17 @@ body.header-mock .iz-header {
 
           .nav-direct {
             font-size: 18px;
-            display: inline-block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
             width: 100%;
             height: 100%;
             padding: 30px 0;
+          }
+
+          .nav-direct i {
+            font-size: 16px;
           }
         }
 
