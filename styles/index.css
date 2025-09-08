@@ -516,7 +516,8 @@
 }
 
 .home-title {
-  justify-content: center;
+  align-content: center;
+  text-align: center;
 }
 
 .iz-section-title::after {
