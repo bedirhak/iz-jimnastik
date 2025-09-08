@@ -38,11 +38,11 @@ document.addEventListener("DOMContentLoaded", function () {
                         Güvenli ve modern tesislerimizde kaliteli eğitim sunarak, her yaştan sporcuyu destekliyoruz.
                     </p>
                     <div class="footer-social-modern">
-                        <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-btn"><i class="fab fa-youtube"></i></a>
-                        <a href="#" class="social-btn"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#" class="social-btn"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.instagram.com/izcimnastik?igsh=eG1qcHdpNDUwazhz" target="_blank" class="social-btn"><i class="fab fa-instagram"></i></a>
+                        <a href="#"  target="_blank" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"  target="_blank" class="social-btn"><i class="fab fa-youtube"></i></a>
+                        <a href="#"  target="_blank" class="social-btn"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"  target="_blank" class="social-btn"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
 

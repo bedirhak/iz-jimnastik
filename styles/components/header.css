@@ -130,7 +130,7 @@ body.header-mock .iz-header {
           text-align: center;
 
           &:hover {
-            background-color: var(--light-gray);
+            background-color: white;
             transition: all 0.3s ease-in-out;
             color: var (--main-gray);
 
