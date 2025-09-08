@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
+        integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="./assets/fav.png">
+    <link rel="stylesheet" href="styles/normalization.css">
+    <link rel="stylesheet" href="styles/components/header.css">
+    <link rel="stylesheet" href="styles/components/footer-modern.css">
+    <link rel="stylesheet" href="styles/components/whatsapp-button.css">
+    <link rel="stylesheet" href="styles/galery.css">
+    <script src="scripts/components.js"></script>
+    <script src="./scripts/header.js"></script>
+    <title>İZ CİMNASTİK - Galeri</title>
+</head>
+
+<body class="header-mock">
+
+    <main class="iz-gallery-main">
+        <!-- Hero Section -->
+        <section class="iz-gallery-hero">
+            <div class="iz-hero-content">
+                <h1 class="iz-hero-title">Galeri</h1>
+                <p class="iz-hero-subtitle">Cimnastik serüvenimizden kareler ve öğrencilerimizin başarı anları</p>
+            </div>
+        </section>
+
+        <!-- Gallery Filters -->
+        <section class="iz-gallery-filters">
+            <div class="iz-container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">
+                        <i class="fas fa-th"></i> Tümü
+                    </button>
+                    <button class="filter-btn" data-filter="training">
+                        <i class="fas fa-dumbbell"></i> Antrenmanlar
+                    </button>
+                    <button class="filter-btn" data-filter="competitions">
+                        <i class="fas fa-trophy"></i> Yarışmalar
+                    </button>
+                    <button class="filter-btn" data-filter="events">
+                        <i class="fas fa-calendar-alt"></i> Etkinlikler
+                    </button>
+                    <button class="filter-btn" data-filter="facilities">
+                        <i class="fas fa-building"></i> Tesislerimiz
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Grid -->
+        <section class="iz-gallery-grid-section">
+            <div class="iz-container">
+                <div class="iz-gallery-grid" id="galleryGrid">
+                    <!-- Images will be dynamically loaded here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox-modal" id="lightboxModal">
+        <div class="lightbox-backdrop" onclick="closeLightbox()"></div>
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()">
+                <i class="fas fa-times"></i>
+            </button>
+            <button class="lightbox-prev" onclick="previousImage()">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="lightbox-next" onclick="nextImage()">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <img class="lightbox-image" id="lightboxImage" src="" alt="">
+            <div class="lightbox-info">
+                <h3 class="lightbox-title" id="lightboxTitle"></h3>
+                <p class="lightbox-description" id="lightboxDescription"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/905309491706" target="_blank" class="whatsapp-link">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="scripts/galery.js"></script>
+</body>
+
+</html>

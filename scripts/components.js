@@ -6,11 +6,14 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
     </a>
 
+ 
+
     <nav class="iz-header-nav">
       <ul class="iz-header-nav-list">
         <li class="nav-links"><a class="nav-direct" href="./index.html"><i class="fas fa-home"></i> Anasayfa</a></li>
         <li class="nav-links"><a class="nav-direct" href="./about.html"><i class="fas fa-info-circle"></i> Hakkımızda</a></li>
         <li class="nav-links"><a class="nav-direct" href="./services.html"><i class="fas fa-dumbbell"></i> Hizmetlerimiz</a></li>
+        <li class="nav-links"><a class="nav-direct" href="./galery.html"><i class="fas fa-images"></i> Galeri</a></li>
         <!-- <li class="nav-links"><a class="nav-direct" href="./team.html">Eğitmenlerimiz</a></li> -->
         <li class="nav-links"><a class="nav-direct" href="./contact.html"><i class="fas fa-envelope"></i> İletişim</a></li>
       </ul>

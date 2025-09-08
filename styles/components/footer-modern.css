@@ -61,11 +61,11 @@
 }
 
 .footer-logo-modern {
-    width: 200px;
+    width: 290px;
     height: 140px;
     background: url("../../assets/images/logo.png") no-repeat center;
-    background-size: contain;
-    margin-bottom: 25px;
+    background-size: cover;
+    margin-bottom: 0;
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
 }
 
