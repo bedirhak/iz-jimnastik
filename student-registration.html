@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
+        integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Öğrenci Kayıt Formu - İz CİMNASTİK</title>
+    <link rel="stylesheet" href="styles/normalization.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <script src="./scripts/header.js"></script>
+    <link rel="icon" type="image/x-icon" href="./assets/izLogo.png">
+
+    <style>
+        .registration-form-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-title {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .form-section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid #e74c3c;
+        }
+
+        .form-section h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #e74c3c;
+            box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: linear-gradient(45deg, #c0392b, #a93226);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+        }
+
+        .required {
+            color: #e74c3c;
+        }
+
+        @media (max-width: 768px) {
+            .registration-form-container {
+                margin: 0;
+                padding: 1rem;
+                padding-top: 100px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .form-title {
+                font-size: 2rem;
+                padding-top: 16px;
+            }
+
+            .iz-header {
+                position: fixed;
+                top: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: white;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            }
+        }
+
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border: 1px solid #c3e6cb;
+            display: none;
+        }
+
+        body {
+            min-height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="iz-header">
+        <a href="./index.html">
+            <div class="iz-header-logo"></div>
+        </a>
+
+
+    </header>
+
+    <main class="registration-form-container">
+        <h1 class="form-title">
+            <i class="fas fa-user-plus"></i>
+            Öğrenci Kayıt Formu
+        </h1>
+
+        <div class="success-message" id="successMessage">
+            <i class="fas fa-check-circle"></i>
+            Kayıt başvurunuz başarıyla gönderildi. En kısa sürede sizinle iletişime geçeceğiz.
+        </div>
+
+        <form id="registrationForm" action="#" method="POST">
+            <!-- 1. Veli Bilgileri -->
+            <div class="form-section">
+                <h3>
+                    <i class="fas fa-user"></i>
+                    1. Veli Bilgileri (Ana Veli)
+                </h3>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="parent1Name">1. Veli Adı <span class="required">*</span></label>
+                        <input type="text" id="parent1Name" name="parent1Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="parent1Surname">1. Veli Soyadı <span class="required">*</span></label>
+                        <input type="text" id="parent1Surname" name="parent1Surname" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="parent1Email">1. Veli E-posta <span class="required">*</span></label>
+                        <input type="email" id="parent1Email" name="parent1Email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="parent1Phone">1. Veli Telefon Numarası <span class="required">*</span></label>
+                        <input type="tel" id="parent1Phone" name="parent1Phone" placeholder="0532 123 45 67" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="parent1Relation">1. Veli Yakınlık Derecesi <span class="required">*</span></label>
+                    <select id="parent1Relation" name="parent1Relation" required>
+                        <option value="">Seçiniz</option>
+                        <option value="anne">Anne</option>
+                        <option value="baba">Baba</option>
+                        <option value="buyukanne">Büyükanne</option>
+                        <option value="buyukbaba">Büyükbaba</option>
+                        <option value="teyze">Teyze</option>
+                        <option value="amca">Amca</option>
+                        <option value="hala">Hala</option>
+                        <option value="dayı">Dayı</option>
+                        <option value="diger">Diğer</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- 2. Veli Bilgileri -->
+            <div class="form-section">
+                <h3>
+                    <i class="fas fa-user-friends"></i>
+                    2. Veli Bilgileri
+                </h3>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="parent2Name">2. Veli Adı <span class="required">*</span></label>
+                        <input type="text" id="parent2Name" name="parent2Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="parent2Surname">2. Veli Soyadı <span class="required">*</span></label>
+                        <input type="text" id="parent2Surname" name="parent2Surname" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="parent2Email">2. Veli E-posta <span class="required">*</span></label>
+                        <input type="email" id="parent2Email" name="parent2Email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="parent2Phone">2. Veli Telefon Numarası <span class="required">*</span></label>
+                        <input type="tel" id="parent2Phone" name="parent2Phone" placeholder="0532 123 45 67" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="parent2Relation">2. Veli Yakınlık Derecesi <span class="required">*</span></label>
+                    <select id="parent2Relation" name="parent2Relation" required>
+                        <option value="">Seçiniz</option>
+                        <option value="anne">Anne</option>
+                        <option value="baba">Baba</option>
+                        <option value="buyukanne">Büyükanne</option>
+                        <option value="buyukbaba">Büyükbaba</option>
+                        <option value="teyze">Teyze</option>
+                        <option value="amca">Amca</option>
+                        <option value="hala">Hala</option>
+                        <option value="dayı">Dayı</option>
+                        <option value="diger">Diğer</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Öğrenci Bilgileri -->
+            <div class="form-section">
+                <h3>
+                    <i class="fas fa-child"></i>
+                    Öğrenci Bilgileri
+                </h3>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="studentName">Öğrenci Adı <span class="required">*</span></label>
+                        <input type="text" id="studentName" name="studentName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="studentSurname">Öğrenci Soyadı <span class="required">*</span></label>
+                        <input type="text" id="studentSurname" name="studentSurname" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="studentBirthDate">Doğum Tarihi <span class="required">*</span></label>
+                        <input type="date" id="studentBirthDate" name="studentBirthDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="studentGender">Cinsiyet</label>
+                        <select id="studentGender" name="studentGender">
+                            <option value="">Seçiniz</option>
+                            <option value="kiz">Kız</option>
+                            <option value="erkek">Erkek</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Okul Bilgileri -->
+            <div class="form-section">
+                <h3>
+                    <i class="fas fa-school"></i>
+                    Okul Bilgileri
+                </h3>
+
+                <div class="form-group">
+                    <label for="schoolName">Okul Adı <span class="required">*</span></label>
+                    <input type="text" id="schoolName" name="schoolName" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="schoolGrade">Sınıf <span class="required">*</span></label>
+                        <select id="schoolGrade" name="schoolGrade" required>
+                            <option value="">Seçiniz</option>
+                            <option value="anaokulu">Anaokulu</option>
+                            <option value="1">1. Sınıf</option>
+                            <option value="2">2. Sınıf</option>
+                            <option value="3">3. Sınıf</option>
+                            <option value="4">4. Sınıf</option>
+                            <option value="5">5. Sınıf</option>
+                            <option value="6">6. Sınıf</option>
+                            <option value="7">7. Sınıf</option>
+                            <option value="8">8. Sınıf</option>
+                            <option value="9">9. Sınıf</option>
+                            <option value="10">10. Sınıf</option>
+                            <option value="11">11. Sınıf</option>
+                            <option value="12">12. Sınıf</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="schoolDistrict">Okul İlçesi</label>
+                        <input type="text" id="schoolDistrict" name="schoolDistrict">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ek Bilgiler -->
+            <div class="form-section">
+                <h3>
+                    <i class="fas fa-info-circle"></i>
+                    Ek Bilgiler
+                </h3>
+
+                <div class="form-group">
+                    <label for="experienceLevel">Jimnastik Deneyimi</label>
+                    <select id="experienceLevel" name="experienceLevel">
+                        <option value="">Seçiniz</option>
+                        <option value="hic-yok">Hiç Yok (Yeni Başlayan)</option>
+                        <option value="1-yildan-az">1 Yıldan Az</option>
+                        <option value="1-2-yil">1-2 Yıl</option>
+                        <option value="2-yildan-fazla">2 Yıldan Fazla</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="healthInfo">Sağlık Durumu / Özel Notlar</label>
+                    <textarea id="healthInfo" name="healthInfo" rows="3"
+                        placeholder="Herhangi bir sağlık sorunu, alerji veya özel durumu varsa belirtiniz..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="additionalNotes">Ek Notlar</label>
+                    <textarea id="additionalNotes" name="additionalNotes" rows="3"
+                        placeholder="Eklemek istediğiniz başka bilgiler..."></textarea>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">
+                <i class="fas fa-paper-plane"></i>
+                Kayıt Başvurusunu Gönder
+            </button>
+        </form>
+    </main>
+
+    <script>
+        // Form gönderimi
+        document.getElementById('registrationForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Form verilerini topla
+            const formData = new FormData(this);
+            const data = {};
+
+            for (let [key, value] of formData.entries()) {
+                data[key] = value;
+            }
+
+            // Burada form verilerini sunucuya gönderebilirsiniz
+            console.log('Form Verileri:', data);
+
+            // Başarı mesajını göster
+            document.getElementById('successMessage').style.display = 'block';
+
+            // Formu temizle
+            this.reset();
+
+            // Sayfayı yukarı kaydır
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Telefon formatı fonksiyonu
+        function formatPhone(inputElement) {
+            inputElement.addEventListener('input', function (e) {
+                let value = e.target.value.replace(/\D/g, ''); // Sadece rakamları al
+                if (value.length <= 11) {
+                    if (value.length >= 7) {
+                        value = value.replace(/(\d{4})(\d{3})(\d{2})(\d{2})/, '$1 $2 $3 $4');
+                    } else if (value.length >= 4) {
+                        value = value.replace(/(\d{4})(\d{3})/, '$1 $2');
+                    }
+                    e.target.value = value;
+                }
+            });
+        }
+
+        // 1. ve 2. veli telefon formatlaması
+        formatPhone(document.getElementById('parent1Phone'));
+        formatPhone(document.getElementById('parent2Phone'));
+
+        // TC No sadece rakam
+        document.getElementById('studentTcno').addEventListener('input', function (e) {
+            e.target.value = e.target.value.replace(/\D/g, '');
+        });
+
+        // Header mobile menu
+        const mobileMenu = document.querySelector('.iz-mobile-menu');
+        const navList = document.querySelector('.iz-header-nav-list');
+
+        if (mobileMenu) {
+            mobileMenu.addEventListener('click', function () {
+                navList.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+
+</html>

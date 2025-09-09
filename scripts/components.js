@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="footer-company">
                     <div class="footer-logo-modern"></div>
                     <p class="footer-company-desc">
-                        İZ Cimnastik olarak profesyonel eğitmenlerimiz ile çocuklarınızın artistik cimnastik
+                        İz Cimnastik olarak profesyonel eğitmenlerimiz ile çocuklarınızın artistik cimnastik
                         yolculuğunda yanınızdayız.
                         Güvenli ve modern tesislerimizde kaliteli eğitim sunarak, her yaştan sporcuyu destekliyoruz.
                     </p>
@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <!-- Footer Bottom -->
             <div class="footer-bottom-modern">
                 <div class="footer-bottom-content">
-                    <p class="footer-copyright">&copy; 2025 İZ Cimnastik. Tüm hakları saklıdır.</p>
+                    <p class="footer-copyright">&copy; 2025 İz Cimnastik. Tüm hakları saklıdır.</p>
                     <p class="footer-copyright"><a href="https://sakarya.digital/">Sakarya Digital</a> tarafından kodlanmıştır.</p>
                     
                 </div>
