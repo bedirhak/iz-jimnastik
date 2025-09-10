@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         </div>
                         <div class="contact-details">
                             <h6>Telefon</h6>
-                            <a href="tel:+905309491706">+90 (530) 949 17 06</a>
+                            <a href="tel:+905454851706">+90 (545) 485 17 06</a>
                         </div>
                     </div>
 

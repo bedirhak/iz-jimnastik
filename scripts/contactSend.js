@@ -13,7 +13,7 @@ document.querySelector("form").addEventListener("submit", function (e) {
     console.log("📋 Form Verileri:");
     console.log("==================");
     console.log("👤 Ad Soyad:", formData.name);
-    console.log("📧 E-posta:", formData.mail);  
+    console.log("📧 E-posta:", formData.mail);
     console.log("📱 Telefon:", formData.phone);
     console.log("💬 Konu:", formData.subject);
     console.log("✉️ Mesaj:", formData.message);
@@ -26,17 +26,40 @@ document.querySelector("form").addEventListener("submit", function (e) {
     submitBtn.textContent = 'Gönderiliyor...';
     submitBtn.disabled = true;
 
-    // Başarılı gönderim simülasyonu (test için)
-    setTimeout(() => {
-        console.log("✅ Form başarıyla işlendi!");
-        alert("✅ Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.");
-        
-        // Formu temizle
-        e.target.reset();
-        console.log("🧹 Form temizlendi");
-        
-        // Button'u eski haline getir
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-    }, 2000); // 2 saniye bekle (loading simülasyonu)
+    // Form verilerini body'de gönder
+    console.log("🚀 Sunucuya gönderiliyor:", formData);
+
+    fetch("https://script.google.com/macros/s/AKfycbzsNLAm4qzQMur-wKeBMVO9dS4H7XbnJu5QIrTeZRea5OIa1tq2E5Xg3QxYH-GbdzZEqA/exec", {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+    })
+        .then(response => {
+            console.log("📡 Sunucu yanıtı alındı:", response);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.text();
+        })
+        .then(result => {
+            console.log("✅ Başarılı yanıt:", result);
+            alert("✅ Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.");
+
+            // Formu temizle
+            e.target.reset();
+            console.log("🧹 Form temizlendi");
+        })
+        .catch(error => {
+            console.error("💥 Hata oluştu:", error);
+            console.log("📋 Gönderilmeye çalışılan veri:", formData);
+            alert("❌ Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyin veya doğrudan bizi arayın.");
+        })
+        .finally(() => {
+            // Button'u eski haline getir
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+            console.log("🔄 Form durumu sıfırlandı");
+        });
 });
