@@ -6,15 +6,16 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
     </a>
 
- 
+  <div class="iz-header-love">
+      <img src="./assets/images/home/love.png" alt="I love gymnastics" class="love-image">
+    </div>
 
     <nav class="iz-header-nav">
       <ul class="iz-header-nav-list">
         <li class="nav-links"><a class="nav-direct" href="./index.html"><i class="fas fa-home"></i> Anasayfa</a></li>
         <li class="nav-links"><a class="nav-direct" href="./about.html"><i class="fas fa-info-circle"></i> Hakkımızda</a></li>
         <li class="nav-links"><a class="nav-direct" href="./services.html"><i class="fas fa-dumbbell"></i> Hizmetlerimiz</a></li>
-        <li class="nav-links"><a class="nav-direct" href="./galery.html"><i class="fas fa-images"></i> Galeri</a></li>
-        <!-- <li class="nav-links"><a class="nav-direct" href="./team.html">Eğitmenlerimiz</a></li> -->
+        <!-- <li class="nav-links"><a class="nav-direct" href="./galery.html"><i class="fas fa-images"></i> Galeri</a></li> -->
         <li class="nav-links"><a class="nav-direct" href="./contact.html"><i class="fas fa-envelope"></i> İletişim</a></li>
       </ul>
     </nav>
@@ -42,10 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     </p>
                     <div class="footer-social-modern">
                         <a href="https://www.instagram.com/izcimnastik?igsh=eG1qcHdpNDUwazhz" target="_blank" class="social-btn"><i class="fab fa-instagram"></i></a>
-                        <a href="#"  target="_blank" class="social-btn"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"  target="_blank" class="social-btn"><i class="fab fa-youtube"></i></a>
-                        <a href="#"  target="_blank" class="social-btn"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#"  target="_blank" class="social-btn"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
 
@@ -57,8 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <li><a href="./about.html">Hakkımızda</a></li>
                         <li><a href="./services.html">Derslerimiz</a></li>
                         <li><a href="./contact.html">İletişim</a></li>
-                        <li><a href="#">Galeri</a></li>
-                        <li><a href="#">Etkinlikler</a></li>
+                         <!-- <li><a href="#">Galeri</a></li>  -->
                     </ul>
                 </div>
 
@@ -66,12 +62,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="footer-section-modern">
                     <h3 class="footer-section-title">Hizmetlerimiz</h3>
                     <ul class="footer-menu-modern">
-                        <li><a href="#">4-12 Yaş Artistik Cimnastik</a></li>
-                        <li><a href="#">Özel Ders</a></li>
-                        <li><a href="#">Temel Hareket Eğitimi</a></li>
-                        <li><a href="#">Grup Dersleri</a></li>
-                        <li><a href="#">Yarışma Hazırlığı</a></li>
-                        <li><a href="#">Yaz Kampları</a></li>
+                        <li><a href="./about.html">4-12 Yaş Artistik Cimnastik</a></li>
+                        <li><a href="./about.html">Temel Hareket Eğitimi</a></li>
+                        <li><a href="./about.html">Yarışma Hazırlığı</a></li>
+                        <li><a href="./about.html">Grup Dersleri</a></li>
+                        <li><a href="./about.html">Özel Ders</a></li>
                     </ul>
                 </div>
 

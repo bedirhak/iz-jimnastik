@@ -4,6 +4,203 @@
     background-color: #ffffff;
 }
 
+/* Biz Kimiz Section */
+.iz-who-we-are {
+    padding: 120px 0 80px;
+    /* background: linear-gradient(13s5deg, #fafafa 0%, #f5f5f5 100%); */
+    position: relative;
+}
+
+.iz-who-we-are::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../assets/images/home/love.png') center/contain no-repeat;
+    opacity: 0.03;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.iz-who-content-wrapper {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 40px;
+}
+
+.iz-who-content {
+    flex: 1;
+    text-align: center;
+    max-width: 100%;
+}
+
+.iz-who-text-image {
+    display: flex;
+    margin-bottom: 16px;
+    align-items: center;
+    text-align: center;
+}
+
+.iz-floating-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(185, 159, 0, 0.2);
+    transition: all 0.4s ease;
+    filter: brightness(1.1) saturate(1.1);
+}
+
+.iz-floating-image:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(185, 159, 0, 0.3);
+    filter: brightness(1.2) saturate(1.2);
+}
+
+.iz-image-top {
+    animation: float-top 6s ease-in-out infinite;
+}
+
+.iz-image-bottom {
+    animation: float-bottom 6s ease-in-out infinite 3s;
+}
+
+@keyframes float-top {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes float-bottom {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.iz-who-title {
+    font-size: 2.8rem;
+    color: var(--main-gold);
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+.iz-who-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(45deg, var(--main-gold), var(--laci));
+    border-radius: 2px;
+}
+
+.iz-who-text {
+    text-align: left;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.iz-who-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #444;
+    padding: 0 20px;
+    position: relative;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+    .iz-who-image {
+        flex: 0 0 150px;
+    }
+
+    .iz-floating-image {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .iz-who-we-are {
+        padding: 80px 0 60px;
+    }
+
+    .iz-who-content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .iz-who-image {
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 0 !important;
+        gap: 20px;
+    }
+
+    .iz-who-image-right {
+        order: -1;
+    }
+
+    .iz-who-title {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .iz-who-text p {
+        font-size: 1rem;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .iz-who-text p:first-child {
+        font-size: 1.1rem;
+    }
+
+    .iz-floating-image {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .iz-who-image {
+        gap: 15px;
+    }
+
+    .iz-floating-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .iz-who-content-wrapper {
+        padding: 0 10px;
+    }
+}
+
 /* Hero Section */
 .iz-about-hero {
     background: linear-gradient(135deg, var(--laci) 0%, var(--main-gold) 100%);
@@ -35,7 +232,6 @@
 
 .iz-hero-title {
     font-size: 3.5rem;
-    font-weight: 700;
     color: white;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -87,7 +283,6 @@
 /* Text Content */
 .iz-section-title {
     font-size: 2.5rem;
-    font-weight: 700;
     color: var(--laci);
     margin-bottom: 25px;
     display: flex;
@@ -144,7 +339,6 @@
 }
 
 .iz-feature-item span {
-    font-weight: 500;
     color: var(--laci);
 }
 
@@ -178,8 +372,7 @@
 
 .iz-benefit-card h4 {
     font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--laci);
+    color: var(--main-gold);
     margin-bottom: 10px;
 }
 
@@ -225,13 +418,12 @@
 
 .iz-advantage-icon i {
     font-size: 1.5rem;
-    color: var(--laci);
+    color: white;
 }
 
 .iz-advantage-content h4 {
     font-size: 1.3rem;
-    font-weight: 600;
-    color: var(--laci);
+    color: var(--main-gold);
     margin-bottom: 8px;
 }
 
@@ -293,8 +485,7 @@
 
 .iz-skill-card h4 {
     font-size: 1.3rem;
-    font-weight: 600;
-    color: var(--laci);
+    color: var(--main-gold);
     margin-bottom: 12px;
 }
 
@@ -318,7 +509,6 @@
 
 .iz-cta-title {
     font-size: 2.8rem;
-    font-weight: 700;
     color: white;
     margin-bottom: 20px;
 }
@@ -345,7 +535,6 @@
     padding: 15px 30px;
     border-radius: 50px;
     text-decoration: none;
-    font-weight: 600;
     font-size: 1.1rem;
     transition: all 0.3s ease;
     border: 2px solid transparent;
@@ -487,7 +676,6 @@
 h3 {
     font-size: 24px;
     line-height: 32px;
-    font-weight: 500;
     margin-bottom: 16px;
 }
 
@@ -495,7 +683,6 @@ h3 {
     p {
         font-size: 16px;
         line-height: 24px;
-        font-weight: 300;
         color: var(--light-gray);
     }
 }
@@ -563,7 +750,6 @@ h3 {
     top: calc(50% - 60px);
     font-size: 120px;
     line-height: 120px;
-    font-weight: 300;
     font-family: "Titillium Web", sans-serif;
     transition: all 0.8s ease-in-out;
     color: var(--laci);
@@ -576,7 +762,6 @@ h3 {
     margin-right: -25%;
     font-size: 24px;
     line-height: 24px;
-    font-weight: 400;
     font-family: "Titillium Web", sans-serif;
     color: var(--laci);
 
@@ -633,7 +818,6 @@ h3 {
 
 .iz-about-contact-title {
     text-align: center;
-    font-weight: 700;
     font-size: 32px;
     color: var(--laci);
     margin-bottom: 32px;

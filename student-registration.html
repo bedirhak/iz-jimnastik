@@ -12,7 +12,7 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <title>Öğrenci Kayıt Formu - İz CİMNASTİK</title>
+    <title>Öğrenci Kayıt Formu - İz Cimnastik</title>
     <link rel="stylesheet" href="styles/normalization.css">
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/contact.css">
@@ -31,7 +31,7 @@
 
         .form-title {
             text-align: center;
-            color: #2c3e50;
+            color: var(--main-gold);
             margin-bottom: 2rem;
             font-size: 2.5rem;
             font-weight: 700;
@@ -42,11 +42,11 @@
             padding: 1.5rem;
             background: #f8f9fa;
             border-radius: 10px;
-            border-left: 5px solid #e74c3c;
+            border-left: 5px solid var(--main-gold);
         }
 
         .form-section h3 {
-            color: #2c3e50;
+            color: var(--main-gold);
             margin-bottom: 1rem;
             font-size: 1.3rem;
             font-weight: 600;
@@ -62,7 +62,7 @@
         .form-group label {
             display: block;
             margin-bottom: 0.5rem;
-            color: #2c3e50;
+            color: var(--main-gold);
             font-weight: 500;
         }
 
@@ -82,7 +82,7 @@
         .form-group select:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: #e74c3c;
+            border-color: var(--main-gold);
             box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
         }
 
@@ -95,7 +95,7 @@
         .submit-btn {
             width: 100%;
             padding: 1rem;
-            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            background: linear-gradient(45deg, var(--main-gold), #c0392b);
             color: white;
             border: none;
             border-radius: 8px;
@@ -112,10 +112,124 @@
         }
 
         .required {
-            color: #e74c3c;
+            color: var(--main-gold);
+        }
+
+        /* Checkbox Stilleri */
+        .checkbox-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            cursor: pointer;
+            line-height: 1.5;
+        }
+
+        .checkbox-label input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            margin-top: 2px;
+            cursor: pointer;
+            accent-color: var(--main-gold);
+        }
+
+        .checkbox-text {
+            color: var(--main-gold);
+            font-size: 0.95rem;
+        }
+
+        .checkbox-text a {
+            color: var(--main-gold);
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+
+        .checkbox-text a:hover {
+            color: #c0392b;
+        }
+
+        /* Notify Stilleri */
+        .notify {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(231, 76, 60, 0.3);
+            z-index: 9999;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: all 0.4s ease;
+            max-width: 350px;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .notify.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .notify i {
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .notify-close {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 1.1rem;
+            padding: 0;
+            margin-left: auto;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .notify-close:hover {
+            opacity: 1;
+        }
+
+        /* Checkbox hata durumu */
+        .checkbox-error input[type="checkbox"] {
+            outline: 2px solid #e74c3c !important;
+            outline-offset: 1px;
+            animation: shake 0.5s ease-in-out;
+        }
+
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-5px);
+            }
+
+            75% {
+                transform: translateX(5px);
+            }
         }
 
         @media (max-width: 768px) {
+            .notify {
+                top: 10px;
+                right: 10px;
+                left: 10px;
+                max-width: none;
+                font-size: 0.9rem;
+            }
+
             .registration-form-container {
                 margin: 0;
                 padding: 1rem;
@@ -155,6 +269,69 @@
         body {
             min-height: 100vh;
         }
+
+        /* Belge İndirme Bölümü */
+        .documents-section {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border: 2px solid var(--main-gold);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .documents-title {
+            color: var(--main-gold);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .documents-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .document-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--main-gold);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(231, 76, 60, 0.2);
+        }
+
+        .document-link:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+            color: white;
+            text-decoration: none;
+        }
+
+        .document-link i {
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .documents-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .document-link {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+            }
+        }
     </style>
 </head>
 
@@ -172,6 +349,28 @@
             <i class="fas fa-user-plus"></i>
             Öğrenci Kayıt Formu
         </h1>
+
+        <!-- Belge İndirme Bölümü -->
+        <div class="documents-section">
+            <h3 class="documents-title">
+                <i class="fas fa-file-pdf"></i>
+                Önemli Belgeler
+            </h3>
+            <p style="color: #666; margin-bottom: 1rem;">
+                Kayıt işlemi öncesinde aşağıdaki belgeleri incelemenizi öneriyoruz:
+            </p>
+            <div class="documents-links">
+                <a href="./assets/documents/İz_Cimnastik_Kullanım_Kosullari.pdf" class="document-link" target="_blank"
+                    download>
+                    <i class="fas fa-download"></i>
+                    Kullanım Koşulları
+                </a>
+                <a href="./assets/documents/İc_Cimnastik_Gizlilik.pdf" class="document-link" target="_blank" download>
+                    <i class="fas fa-download"></i>
+                    Gizlilik Politikası
+                </a>
+            </div>
+        </div>
 
         <div class="success-message" id="successMessage">
             <i class="fas fa-check-circle"></i>
@@ -225,6 +424,18 @@
                         <option value="diger">Diğer</option>
                     </select>
                 </div>
+
+                <div class="form-group">
+                    <label for="parent1Job">1. Veli Meslek</label>
+                    <input type="text" id="parent1Job" name="parent1Job"
+                        placeholder="Örn: Öğretmen, Mühendis, Doktor...">
+                </div>
+
+                <div class="form-group">
+                    <label for="parent1Address">1. Veli Adres</label>
+                    <textarea id="parent1Address" name="parent1Address" rows="2"
+                        placeholder="Mahalle, Sokak, Bina No, İlçe, İl..."></textarea>
+                </div>
             </div>
 
             <!-- 2. Veli Bilgileri -->
@@ -273,6 +484,18 @@
                         <option value="diger">Diğer</option>
                     </select>
                 </div>
+
+                <div class="form-group">
+                    <label for="parent2Job">2. Veli Meslek</label>
+                    <input type="text" id="parent2Job" name="parent2Job"
+                        placeholder="Örn: Öğretmen, Mühendis, Doktor...">
+                </div>
+
+                <div class="form-group">
+                    <label for="parent2Address">2. Veli Adres</label>
+                    <textarea id="parent2Address" name="parent2Address" rows="2"
+                        placeholder="Mahalle, Sokak, Bina No, İlçe, İl..."></textarea>
+                </div>
             </div>
 
             <!-- Öğrenci Bilgileri -->
@@ -310,6 +533,12 @@
                     </div>
                 </div>
 
+                <div class="form-group">
+                    <label for="studentTcno">T.C. Kimlik No <span class="required">*</span></label>
+                    <input type="text" id="studentTcno" name="studentTcno" maxlength="11" pattern="[0-9]{11}" required
+                        placeholder="12345678901">
+                </div>
+
             </div>
 
             <!-- Okul Bilgileri -->
@@ -338,16 +567,12 @@
                             <option value="6">6. Sınıf</option>
                             <option value="7">7. Sınıf</option>
                             <option value="8">8. Sınıf</option>
-                            <option value="9">9. Sınıf</option>
-                            <option value="10">10. Sınıf</option>
-                            <option value="11">11. Sınıf</option>
-                            <option value="12">12. Sınıf</option>
                         </select>
                     </div>
 
                     <div class="form-group">
                         <label for="schoolDistrict">Okul İlçesi</label>
-                        <input type="text" id="schoolDistrict" name="schoolDistrict">
+                        <input type="text" id="schoolDistrict" name="schoolDistrict" required>
                     </div>
                 </div>
             </div>
@@ -361,7 +586,7 @@
 
                 <div class="form-group">
                     <label for="experienceLevel">Jimnastik Deneyimi</label>
-                    <select id="experienceLevel" name="experienceLevel">
+                    <select id="experienceLevel" name="experienceLevel" required>
                         <option value="">Seçiniz</option>
                         <option value="hic-yok">Hiç Yok (Yeni Başlayan)</option>
                         <option value="1-yildan-az">1 Yıldan Az</option>
@@ -372,14 +597,47 @@
 
                 <div class="form-group">
                     <label for="healthInfo">Sağlık Durumu / Özel Notlar</label>
-                    <textarea id="healthInfo" name="healthInfo" rows="3"
+                    <textarea id="healthInfo" name="healthInfo" rows="3" required
                         placeholder="Herhangi bir sağlık sorunu, alerji veya özel durumu varsa belirtiniz..."></textarea>
                 </div>
 
                 <div class="form-group">
                     <label for="additionalNotes">Ek Notlar</label>
-                    <textarea id="additionalNotes" name="additionalNotes" rows="3"
+                    <textarea id="additionalNotes" name="additionalNotes" rows="3" required
                         placeholder="Eklemek istediğiniz başka bilgiler..."></textarea>
+                </div>
+            </div>
+
+            <!-- Onaylar ve İzinler -->
+            <div class="form-section">
+                <h3>
+                    <i class="fas fa-check-square"></i>
+                    Onaylar ve İzinler
+                </h3>
+
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="photoPermission" name="photoPermission">
+                        <span class="checkbox-text">
+                            Çocuğumun eğitim ve etkinlikler sırasında çekilen fotoğraf ve videolarının İZ Cimnastik
+                            tarafından sosyal medya, web sitesi, tanıtım materyalleri ve diğer pazarlama faaliyetlerinde
+                            kullanılmasına <span class="required">izin veriyorum.</span>
+                        </span>
+                    </label>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="termsAcceptance" name="termsAcceptance" required>
+                        <span class="checkbox-text">
+                            <a href="./assets/documents/İz_Cimnastik_Kullanım_Kosullari.pdf" target="_blank" download>
+                                <i class="fas fa-download"></i> Kullanım Koşulları
+                            </a> ve
+                            <a href="./assets/documents/İc_Cimnastik_Gizlilik.pdf" target="_blank" download>
+                                <i class="fas fa-download"></i> Gizlilik Politikası
+                            </a>'nı okudum, anladım ve <span class="required">kabul ediyorum. *</span>
+                        </span>
+                    </label>
                 </div>
             </div>
 
@@ -394,6 +652,29 @@
         // Form gönderimi
         document.getElementById('registrationForm').addEventListener('submit', function (e) {
             e.preventDefault();
+
+            // Checkbox kontrolü
+            const photoPermission = document.getElementById('photoPermission');
+            const termsAcceptance = document.getElementById('termsAcceptance');
+
+            // Önceki hataları temizle
+            document.querySelectorAll('.checkbox-error').forEach(el => {
+                el.classList.remove('checkbox-error');
+            });
+
+            if (!photoPermission.checked) {
+                showNotify('Fotoğraf kullanım izni onaylanması zorunludur!', 'fas fa-exclamation-triangle');
+                photoPermission.closest('.checkbox-group').classList.add('checkbox-error');
+                photoPermission.focus();
+                return;
+            }
+
+            if (!termsAcceptance.checked) {
+                showNotify('Kullanım koşulları ve gizlilik politikasının kabul edilmesi zorunludur!', 'fas fa-exclamation-triangle');
+                termsAcceptance.closest('.checkbox-group').classList.add('checkbox-error');
+                termsAcceptance.focus();
+                return;
+            }
 
             // Form verilerini topla
             const formData = new FormData(this);
@@ -438,6 +719,59 @@
         // TC No sadece rakam
         document.getElementById('studentTcno').addEventListener('input', function (e) {
             e.target.value = e.target.value.replace(/\D/g, '');
+        });
+
+        // Notify fonksiyonu
+        function showNotify(message, icon = 'fas fa-info-circle') {
+            // Önceki notify'ları temizle
+            const existingNotify = document.querySelector('.notify');
+            if (existingNotify) {
+                existingNotify.remove();
+            }
+
+            // Yeni notify oluştur
+            const notify = document.createElement('div');
+            notify.className = 'notify';
+            notify.innerHTML = `
+                <i class="${icon}"></i>
+                <span>${message}</span>
+                <button class="notify-close" onclick="closeNotify(this)">
+                    <i class="fas fa-times"></i>
+                </button>
+            `;
+
+            // Body'ye ekle
+            document.body.appendChild(notify);
+
+            // Animasyon için kısa gecikme
+            setTimeout(() => {
+                notify.classList.add('show');
+            }, 100);
+
+            // 5 saniye sonra otomatik kapat
+            setTimeout(() => {
+                closeNotify(notify.querySelector('.notify-close'));
+            }, 5000);
+        }
+
+        // Notify kapatma fonksiyonu
+        function closeNotify(button) {
+            const notify = button.closest('.notify');
+            if (notify) {
+                notify.classList.remove('show');
+                setTimeout(() => {
+                    notify.remove();
+                }, 400);
+            }
+        }
+
+        // Checkbox değişikliklerinde hata stilini kaldır
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', function () {
+                if (this.checked) {
+                    this.closest('.checkbox-group').classList.remove('checkbox-error');
+                }
+            });
         });
 
         // Header mobile menu

@@ -67,6 +67,7 @@
 
   .iz-about-cta {
     background: none;
+    padding: 25px 0;
 
     a {
       display: inline-flex;
@@ -1045,5 +1046,106 @@
 
   .iz-service-name {
     font-size: 1rem;
+  }
+}
+
+/* Ana sayfa explore */
+
+.iz-explore {
+
+  background: #f8f9fa;
+}
+
+.iz-explore-title {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--main-gold);
+  margin-bottom: 1.5rem;
+}
+
+.iz-home-explore {
+  display: flex;
+  justify-content: space-around;
+  width: 1400px;
+  margin: auto;
+  align-items: center;
+  max-width: 100vw;
+  padding-bottom: 50px;
+}
+
+.iz-home-explore-center {
+  width: 400px;
+  border-radius: 500px;
+  padding: 20px;
+  position: relative;
+  border: 2px solid black;
+
+}
+
+.iz-home-explore-center-image-container {
+  width: 100%;
+  border-radius: 500px;
+  border: 2px solid black;
+  overflow: hidden;
+
+  .top-image {
+    position: absolute;
+    top: -2rem;
+    right: 0;
+    width: 110px;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.iz-home-explore-image-continaer {
+  max-width: 250px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 16px;
+  margin-bottom: 20px;
+
+  img {
+    width: 100px;
+  }
+
+  h5 {
+    font-size: 1.5rem;
+    color: black;
+  }
+}
+
+@media (max-width:1400px) {
+  .iz-home-explore {
+    width: 100%;
+  }
+}
+
+@media (max-width:950px) {
+
+  .iz-home-explore {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .iz-home-explore-images {
+    display: flex;
+
+  }
+}
+
+@media (max-width:500px) {
+  .iz-home-explore-center {
+    width: 85%;
+  }
+
+  .iz-home-explore-images {
+    flex-direction: column;
   }
 }
