@@ -30,6 +30,7 @@ body.header-mock .iz-header {
 
   .iz-header-love img {
     transform: rotate(35deg);
+    margin-top: -15px;
   }
 
   .love-image {
