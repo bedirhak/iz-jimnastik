@@ -379,6 +379,10 @@
 
         <form id="registrationForm" action="https://formsubmit.co/izcimnastik@gmail.com" method="POST">
             <!-- 1. Veli Bilgileri -->
+            <input type="hidden" name="_subject" value="Üyelik Formu - İz Cimnastik">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://izcimnastik.com/student-registration.html?success=true">
+            <input type="hidden" name="_captcha" value="true">
             <div class="form-section">
                 <h3>
                     <i class="fas fa-user"></i>
@@ -650,139 +654,6 @@
         </form>
     </main>
 
-    <!-- <script>
-        // Form gönderimi
-        document.getElementById('registrationForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            // Checkbox kontrolü
-            const photoPermission = document.getElementById('photoPermission');
-            const termsAcceptance = document.getElementById('termsAcceptance');
-
-            // Önceki hataları temizle
-            document.querySelectorAll('.checkbox-error').forEach(el => {
-                el.classList.remove('checkbox-error');
-            });
-
-            if (!photoPermission.checked) {
-                showNotify('Fotoğraf kullanım izni onaylanması zorunludur!', 'fas fa-exclamation-triangle');
-                photoPermission.closest('.checkbox-group').classList.add('checkbox-error');
-                photoPermission.focus();
-                return;
-            }
-
-            if (!termsAcceptance.checked) {
-                showNotify('Kullanım koşulları ve gizlilik politikasının kabul edilmesi zorunludur!', 'fas fa-exclamation-triangle');
-                termsAcceptance.closest('.checkbox-group').classList.add('checkbox-error');
-                termsAcceptance.focus();
-                return;
-            }
-
-            // Form verilerini topla
-            const formData = new FormData(this);
-            const data = {};
-
-            for (let [key, value] of formData.entries()) {
-                data[key] = value;
-            }
-
-            // Başarı mesajını göster
-            document.getElementById('successMessage').style.display = 'block';
-
-            // Formu temizle
-            this.reset();
-
-            // Sayfayı yukarı kaydır
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        // Telefon formatı fonksiyonu
-        function formatPhone(inputElement) {
-            inputElement.addEventListener('input', function (e) {
-                let value = e.target.value.replace(/\D/g, ''); // Sadece rakamları al
-                if (value.length <= 11) {
-                    if (value.length >= 7) {
-                        value = value.replace(/(\d{4})(\d{3})(\d{2})(\d{2})/, '$1 $2 $3 $4');
-                    } else if (value.length >= 4) {
-                        value = value.replace(/(\d{4})(\d{3})/, '$1 $2');
-                    }
-                    e.target.value = value;
-                }
-            });
-        }
-
-        // 1. ve 2. veli telefon formatlaması
-        formatPhone(document.getElementById('parent1Phone'));
-        formatPhone(document.getElementById('parent2Phone'));
-
-        // TC No sadece rakam
-        document.getElementById('studentTcno').addEventListener('input', function (e) {
-            e.target.value = e.target.value.replace(/\D/g, '');
-        });
-
-        // Notify fonksiyonu
-        function showNotify(message, icon = 'fas fa-info-circle') {
-            // Önceki notify'ları temizle
-            const existingNotify = document.querySelector('.notify');
-            if (existingNotify) {
-                existingNotify.remove();
-            }
-
-            // Yeni notify oluştur
-            const notify = document.createElement('div');
-            notify.className = 'notify';
-            notify.innerHTML = `
-                <i class="${icon}"></i>
-                <span>${message}</span>
-                <button class="notify-close" onclick="closeNotify(this)">
-                    <i class="fas fa-times"></i>
-                </button>
-            `;
-
-            // Body'ye ekle
-            document.body.appendChild(notify);
-
-            // Animasyon için kısa gecikme
-            setTimeout(() => {
-                notify.classList.add('show');
-            }, 100);
-
-            // 5 saniye sonra otomatik kapat
-            setTimeout(() => {
-                closeNotify(notify.querySelector('.notify-close'));
-            }, 5000);
-        }
-
-        // Notify kapatma fonksiyonu
-        function closeNotify(button) {
-            const notify = button.closest('.notify');
-            if (notify) {
-                notify.classList.remove('show');
-                setTimeout(() => {
-                    notify.remove();
-                }, 400);
-            }
-        }
-
-        // Checkbox değişikliklerinde hata stilini kaldır
-        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
-            checkbox.addEventListener('change', function () {
-                if (this.checked) {
-                    this.closest('.checkbox-group').classList.remove('checkbox-error');
-                }
-            });
-        });
-
-        // Header mobile menu
-        const mobileMenu = document.querySelector('.iz-mobile-menu');
-        const navList = document.querySelector('.iz-header-nav-list');
-
-        if (mobileMenu) {
-            mobileMenu.addEventListener('click', function () {
-                navList.classList.toggle('active');
-            });
-        }
-    </script> -->
 </body>
 
 </html>
