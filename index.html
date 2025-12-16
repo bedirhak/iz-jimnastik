@@ -16,6 +16,7 @@
 
   <title>İz Cimnastik</title>
   <link rel="stylesheet" href="styles/normalization.css">
+  <link rel="stylesheet" href="styles/index.css">
   <script src="./scripts/homepage.js"></script>
   <link rel="icon" type="image/x-icon" href="./assets/izLogo.png">
 
@@ -311,9 +312,39 @@
     <i class="fab fa-whatsapp"></i>
   </a>
 
+  <!-- Team Recruitment Popup -->
+  <div id="teamRecruitmentPopup" class="recruitment-popup-overlay">
+    <div class="recruitment-popup">
+      <button class="recruitment-popup-close" onclick="closeRecruitmentPopup()">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="recruitment-popup-content">
+        <div class="recruitment-popup-icon">
+          <i class="fas fa-users"></i>
+        </div>
+        <h3 class="recruitment-popup-title">Takım Arkadaşları Arıyoruz!</h3>
+        <p class="recruitment-popup-description">
+          İz Cimnastik ailesine katılmak isteyen deneyimli eğitmenler ve yardımcı antrenörler arıyoruz.
+          Çocuklarla çalışmayı seven, cimnastik alanında deneyimli adaylarımızı bekliyoruz.
+        </p>
+        <div class="recruitment-popup-actions">
+          <a href="tel:+905454851706" class="recruitment-btn recruitment-btn-primary">
+            <i class="fas fa-phone"></i>
+            Hemen Ara
+          </a>
+          <a href="./contact.html" class="recruitment-btn recruitment-btn-secondary">
+            <i class="fas fa-envelope"></i>
+            İletişime Geç
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="./scripts/header.js"></script>
   <script src="./scripts/slider.js"></script>
   <script src="./scripts/components.js"></script>
+  <script src="./scripts/recruitment-popup.js"></script>
 
 </body>
 

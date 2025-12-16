@@ -1,0 +1,258 @@
+/* Team Recruitment Popup Styles */
+.recruitment-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 20px;
+}
+
+.recruitment-popup-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.recruitment-popup-overlay.closing {
+    opacity: 0;
+}
+
+.recruitment-popup {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+    max-width: 500px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    transform: scale(0.7) translateY(50px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.recruitment-popup-overlay.show .recruitment-popup {
+    transform: scale(1) translateY(0);
+}
+
+.recruitment-popup-overlay.closing .recruitment-popup {
+    transform: scale(0.9) translateY(20px);
+}
+
+.recruitment-popup-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    color: #666;
+    transition: all 0.2s ease;
+    z-index: 10;
+}
+
+.recruitment-popup-close:hover {
+    background: rgba(0, 0, 0, 0.15);
+    color: #333;
+    transform: scale(1.1);
+}
+
+.recruitment-popup-content {
+    padding: 40px 30px 30px;
+    text-align: center;
+}
+
+.recruitment-popup-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    font-size: 32px;
+    color: white;
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+.recruitment-popup-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2d3748;
+    margin: 0 0 15px;
+    line-height: 1.2;
+}
+
+.recruitment-popup-description {
+    font-size: 16px;
+    color: #718096;
+    line-height: 1.6;
+    margin: 0 0 30px;
+}
+
+.recruitment-popup-actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.recruitment-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+    min-width: 140px;
+    justify-content: center;
+}
+
+.recruitment-btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.recruitment-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+    color: white;
+}
+
+.recruitment-btn-secondary {
+    background: white;
+    color: #667eea;
+    border-color: #667eea;
+}
+
+.recruitment-btn-secondary:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* Prevent body scroll when popup is open */
+body.popup-open {
+    overflow: hidden;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .recruitment-popup-overlay {
+        padding: 15px;
+    }
+
+    .recruitment-popup {
+        border-radius: 15px;
+    }
+
+    .recruitment-popup-content {
+        padding: 30px 20px 25px;
+    }
+
+    .recruitment-popup-title {
+        font-size: 24px;
+    }
+
+    .recruitment-popup-description {
+        font-size: 15px;
+    }
+
+    .recruitment-popup-actions {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .recruitment-btn {
+        width: 100%;
+        padding: 14px 20px;
+    }
+
+    .recruitment-popup-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .recruitment-popup-overlay {
+        padding: 10px;
+    }
+
+    .recruitment-popup-content {
+        padding: 25px 15px 20px;
+    }
+
+    .recruitment-popup-title {
+        font-size: 22px;
+    }
+
+    .recruitment-popup-close {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+        top: 12px;
+        right: 12px;
+    }
+}
+
+/* Animation keyframes */
+@keyframes popupSlideIn {
+    from {
+        transform: scale(0.7) translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes popupSlideOut {
+    from {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(0.9) translateY(20px);
+        opacity: 0;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .recruitment-popup {
+        border: 2px solid #000;
+    }
+
+    .recruitment-popup-close {
+        background: #f0f0f0;
+        border: 1px solid #000;
+    }
+}

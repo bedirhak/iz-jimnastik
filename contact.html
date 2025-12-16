@@ -12,6 +12,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" type="image/x-icon" href="./assets/fav.png">
     <link rel="stylesheet" href="styles/normalization.css">
+    <link rel="stylesheet" href="styles/components/recruitment-popup.css">
     <script src="./scripts/components.js"></script>
     <script src="./scripts/header.js"></script>
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
@@ -96,10 +97,7 @@
 
         <div class="iz-map-container">
 
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3057.8643217278823!2d32.63926597638504!3d39.96678608290104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d337b21c0fcba7%3A0xeef1e99a8ebc0024!2sMotto%20Cimnastik%20Eryaman!5e0!3m2!1str!2str!4v1757309433246!5m2!1str!2str"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3057.864325012551!2d32.63696998914335!3d39.96678600946762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d3370019439d25%3A0xe0898d08b704f9a0!2s%C4%B0z%20Cimnastik%20Eryaman!5e0!3m2!1str!2str!4v1765904387120!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
         </div>
 
@@ -109,12 +107,42 @@
             <i class="fab fa-whatsapp"></i>
         </a>
 
+        <!-- Team Recruitment Popup -->
+        <div id="teamRecruitmentPopup" class="recruitment-popup-overlay">
+            <div class="recruitment-popup">
+                <button class="recruitment-popup-close" onclick="closeRecruitmentPopup()">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="recruitment-popup-content">
+                    <div class="recruitment-popup-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="recruitment-popup-title">Takım Arkadaşları Arıyoruz!</h3>
+                    <p class="recruitment-popup-description">
+                        İz Cimnastik ailesine katılmak isteyen deneyimli eğitmenler ve yardımcı antrenörler arıyoruz.
+                        Çocuklarla çalışmayı seven, cimnastik alanında deneyimli adaylarımızı bekliyoruz.
+                    </p>
+                    <div class="recruitment-popup-actions">
+                        <a href="tel:+905454851706" class="recruitment-btn recruitment-btn-primary">
+                            <i class="fas fa-phone"></i>
+                            Hemen Ara
+                        </a>
+                        <a href="./contact.html" class="recruitment-btn recruitment-btn-secondary">
+                            <i class="fas fa-envelope"></i>
+                            İletişime Geç
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="go-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
             <span class="line left"></span>
             <span class="line right"></span>
         </div>
 
         <script src="./scripts/contactSend.js"></script>
+        <script src="./scripts/recruitment-popup.js"></script>
 
 </body>
 
